@@ -1,7 +1,35 @@
-import { HERO_SCREENSHOT } from '@/data/screenshots'
+import { useEffect, useRef } from 'react'
+import { HERO_POSTER, HERO_VIDEO } from '@/data/screenshots'
 import styles from './index.module.css'
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    // Browsers require muted to be set on the element before play() for autoplay.
+    video.defaultMuted = true
+    video.muted = true
+    video.playsInline = true
+    video.loop = true
+
+    const tryPlay = () => {
+      void video.play().catch(() => {
+        // Autoplay can still fail (e.g. low-power mode); poster remains visible.
+      })
+    }
+
+    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+      tryPlay()
+    } else {
+      video.addEventListener('canplay', tryPlay, { once: true })
+    }
+
+    return () => video.removeEventListener('canplay', tryPlay)
+  }, [])
+
   return (
     <header className={styles.root}>
       <img
@@ -28,9 +56,24 @@ export function Hero() {
 
         <div className={styles.visual}>
           <div className={styles.device}>
-            <img
+            <video
+              ref={videoRef}
               className={styles.screenshot}
-              src={HERO_SCREENSHOT}
+              src={HERO_VIDEO}
+              poster={HERO_POSTER}
+              width={390}
+              height={844}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              disableRemotePlayback
+              aria-label="Numo app demo on iPhone"
+            />
+            <img
+              className={styles.poster}
+              src={HERO_POSTER}
               alt="Numo counter screen on iPhone"
               width={390}
               height={844}

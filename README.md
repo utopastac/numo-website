@@ -28,3 +28,7 @@ Push `docs/` (or enable GitHub Pages from the `docs` folder on `main`). DNS: CNA
 - One folder per component: `index.tsx` + `index.module.css`
 - Only the root element uses a CSS module class; nest everything else
 - Colors / type / spacing via CSS variables in `src/index.css` and `src/styles/`
+
+## Interactive app demo
+
+`src/numo/` is a self-contained React recreation of the iOS UI (exact spacing / radius / type / palette tokens from `counter-ios`). It is not mounted on the marketing page yet — the Hero uses a static screenshot. Import `<NumoApp />` from `@/numo` when you want to wire it up.

@@ -1,22 +1,47 @@
+@import '@styles/breakpoints.css';
+
 .root {
-  padding: var(--space_10) var(--page-pad);
+  padding-block: var(--space_10);
   border-radius: var(--radius-section);
-  overflow: clip;
+
+  @mixin desktop-up {
+    padding-inline: var(--page-pad);
+    overflow: clip;
+  }
 }
 
 .list {
   list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: min(100%, var(--content-max));
+  margin: 0;
+  padding: 0 var(--page-pad);
   display: flex;
   gap: var(--space_3);
   align-items: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+
+  @mixin desktop-up {
+    width: min(100%, var(--content-max));
+    margin-inline: auto;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
 }
 
 .item {
-  flex: 1 1 0;
+  flex: 0 0 80vw;
+  max-width: 80vw;
   min-width: 0;
+  scroll-snap-align: start;
+
+  @mixin desktop-up {
+    flex: 1 1 0;
+    max-width: none;
+    scroll-snap-align: none;
+  }
 }
 
 .image {

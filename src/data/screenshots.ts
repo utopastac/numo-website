@@ -1,5 +1,8 @@
-/** Hero screenshot — full counter page. */
-export const HERO_SCREENSHOT = '/images/protein.png'
+/** Hero still — fallback / reduced-motion. */
+export const HERO_POSTER = '/images/hero-poster.jpg'
+
+/** Hero screen recording — compressed H.264 for autoplay. */
+export const HERO_VIDEO = '/images/hero.mp4'
 
 /** Remaining app screenshots for the gallery (no captions). */
 export const GALLERY_SCREENSHOTS = [

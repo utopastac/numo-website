@@ -110,6 +110,10 @@
   border-radius: calc(var(--radius-phone) - 8px);
 }
 
+.poster {
+  display: none;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -134,5 +138,13 @@
 @media (prefers-reduced-motion: reduce) {
   .device {
     animation: none;
+  }
+
+  .screenshot {
+    display: none;
+  }
+
+  .poster {
+    display: block;
   }
 }
