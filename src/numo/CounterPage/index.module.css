@@ -1,0 +1,126 @@
+.root {
+  --numo-surface: var(--numo-sand);
+  --numo-ring-outline: var(--numo-surface);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: var(--numo-surface);
+  color: var(--numo-text);
+  font-family: var(--numo-font);
+  overflow: clip;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: var(--numo-icon-hit) 1fr auto;
+  align-items: center;
+  min-height: var(--numo-icon-hit);
+  padding-inline: var(--numo-space-0_5);
+}
+
+.toolbarEnd {
+  display: flex;
+  align-items: center;
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: var(--numo-icon-hit);
+  height: var(--numo-icon-hit);
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--numo-text);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.5;
+  }
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: var(--numo-font-xxl);
+  font-weight: var(--numo-weight-medium);
+  letter-spacing: var(--numo-tracking-tight-2);
+  line-height: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--numo-space-2);
+  height: 15rem;
+  padding-inline: var(--numo-space-2);
+  margin-top: var(--numo-space-1);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: calc(var(--numo-space-1) * -1);
+}
+
+.number {
+  margin: 0;
+  font-size: var(--numo-font-x5xl);
+  font-weight: var(--numo-weight-semibold);
+  letter-spacing: var(--numo-tracking-tight-2);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.subtitle {
+  margin: calc(var(--numo-space-1) * -1) 0 0;
+  font-size: var(--numo-font-xxl);
+  font-weight: var(--numo-weight-semibold);
+  letter-spacing: var(--numo-tracking-tight-2);
+  line-height: 1;
+}
+
+.quickAdd {
+  margin-top: var(--numo-space-3);
+}
+
+.toast {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--numo-space-1);
+  align-self: center;
+  margin-top: var(--numo-space-3);
+  padding: var(--numo-space-1) var(--numo-space-2);
+  border-radius: var(--numo-radius-full);
+  background: var(--numo-interactive);
+  color: var(--numo-interactive-fg);
+  font-size: var(--numo-font-md);
+  font-weight: var(--numo-weight-medium);
+  letter-spacing: var(--numo-tracking-tight-2);
+}
+
+.toastDivider {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--numo-white);
+  opacity: 0.35;
+}
+
+.toastUndo {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: var(--numo-font-lg);
+  line-height: 1;
+  cursor: pointer;
+}

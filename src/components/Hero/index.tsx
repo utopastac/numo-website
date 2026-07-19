@@ -13,7 +13,7 @@ export function Hero() {
     video.defaultMuted = true
     video.muted = true
     video.playsInline = true
-    video.loop = true
+    video.loop = false
 
     const tryPlay = () => {
       void video.play().catch(() => {
@@ -65,7 +65,6 @@ export function Hero() {
               height={844}
               autoPlay
               muted
-              loop
               playsInline
               preload="auto"
               disableRemotePlayback

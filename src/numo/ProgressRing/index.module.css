@@ -1,0 +1,8 @@
+.root {
+  display: block;
+  flex-shrink: 0;
+}
+
+.fill {
+  transition: stroke-dashoffset 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}

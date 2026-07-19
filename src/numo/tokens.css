@@ -1,0 +1,79 @@
+/* Scoped iOS tokens — mirrors counter-ios Layout / Color / Type tokens.
+   Applied under the Numo root so the marketing site stays untouched. */
+
+/* Only applied when a Numo root carries `.numoTokens` — does not alter the marketing site. */
+.numoTokens {
+  /* Base (1rem = 8px from site html) */
+  --numo-white: #ffffff;
+  --numo-black: #000000;
+
+  --numo-periwinkle: #c9cfe0;
+  --numo-sand: #e8decf;
+  --numo-lime: #d6e0a8;
+  --numo-mist: #f5f5f7;
+  --numo-blush: #e6d4d6;
+  --numo-sage: #c7d6cc;
+  --numo-sky: #c2d6e3;
+  --numo-clay: #e0c4b2;
+  --numo-slate: #bfc7d4;
+  --numo-butter: #ebe3b8;
+
+  --numo-black-alpha-100: rgb(0 0 0 / 0.1);
+  --numo-black-alpha-140: rgb(0 0 0 / 0.14);
+  --numo-black-alpha-080: rgb(0 0 0 / 0.08);
+
+  /* SpaceToken — 8pt grid */
+  --numo-space-0_5: 0.5rem;
+  --numo-space-1: 1rem;
+  --numo-space-2: 2rem;
+  --numo-space-3: 3rem;
+  --numo-space-4: 4rem;
+  --numo-space-5: 5rem;
+  --numo-space-7: 7rem;
+
+  /* RadiusToken */
+  --numo-radius-xs: 1rem;
+  --numo-radius-sm: 1.5rem;
+  --numo-radius-lg: 2rem;
+  --numo-radius-xl: 18px;
+  --numo-radius-button: var(--numo-radius-xs);
+  --numo-radius-scroll: var(--numo-radius-lg);
+  --numo-radius-full: 9999px;
+
+  /* SizeToken */
+  --numo-icon-hit: 5.5rem;
+  --numo-quick-add: 5.5rem;
+  --numo-entry-row: 5rem;
+  --numo-ring: 12rem;
+  --numo-ring-stroke: 3rem;
+
+  /* Type — FontSizeToken */
+  --numo-font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, sans-serif;
+  --numo-font-xs: 1.5rem;
+  --numo-font-sm: 1.75rem;
+  --numo-font-md: 2rem;
+  --numo-font-lg: 2.25rem;
+  --numo-font-xxl: 3rem;
+  --numo-font-xxxl: 5rem;
+  --numo-font-x5xl: 10rem;
+
+  --numo-weight-regular: 400;
+  --numo-weight-medium: 500;
+  --numo-weight-semibold: 600;
+
+  --numo-tracking-tight-2: -0.02em;
+  --numo-tracking-tight-3: -0.03em;
+  --numo-tracking-tight-5: -0.05em;
+
+  /* Semantic (light + counter theme defaults — sand / black) */
+  --numo-text: var(--numo-black);
+  --numo-text-inverse: var(--numo-white);
+  --numo-surface: var(--numo-sand);
+  --numo-interactive: var(--numo-black);
+  --numo-interactive-fg: var(--numo-white);
+  --numo-ring-track: var(--numo-black-alpha-100);
+  --numo-ring-fill: var(--numo-black);
+  --numo-ring-outline: var(--numo-surface);
+  --numo-border: var(--numo-black-alpha-140);
+  --numo-divider: var(--numo-black-alpha-080);
+}

@@ -1,0 +1,29 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--numo-space-1);
+  padding-inline: var(--numo-space-1);
+}
+
+.button {
+  height: var(--numo-quick-add);
+  border: none;
+  border-radius: var(--numo-radius-button);
+  background: var(--numo-interactive);
+  color: var(--numo-interactive-fg);
+  font-family: var(--numo-font);
+  font-size: var(--numo-font-md);
+  font-weight: var(--numo-weight-semibold);
+  letter-spacing: var(--numo-tracking-tight-5);
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: opacity 0.12s ease-out;
+
+  &:hover {
+    opacity: 0.88;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

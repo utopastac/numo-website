@@ -1,0 +1,79 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+  padding-bottom: var(--numo-space-2);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--numo-divider);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--numo-space-1);
+  height: var(--numo-entry-row);
+  padding-inline: var(--numo-space-2);
+  border-bottom: 1px solid var(--numo-divider);
+  font-family: var(--numo-font);
+  color: var(--numo-text);
+}
+
+.amount {
+  font-size: var(--numo-font-lg);
+  font-weight: var(--numo-weight-semibold);
+  letter-spacing: var(--numo-tracking-tight-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.time {
+  justify-self: end;
+  font-size: var(--numo-font-md);
+  font-weight: var(--numo-weight-regular);
+  letter-spacing: var(--numo-tracking-tight-2);
+}
+
+.delete {
+  width: var(--numo-space-3);
+  height: var(--numo-space-3);
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--numo-text);
+  font-size: var(--numo-font-lg);
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.55;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--numo-space-0_5);
+  margin-top: auto;
+  padding-top: var(--numo-space-2);
+  border: none;
+  border-top: 3px solid var(--numo-text);
+  background: transparent;
+  color: var(--numo-text);
+  font-family: var(--numo-font);
+  font-size: var(--numo-font-lg);
+  font-weight: var(--numo-weight-regular);
+  letter-spacing: var(--numo-tracking-tight-2);
+  cursor: pointer;
+}
+
+.allIcon {
+  font-size: var(--numo-font-sm);
+}
