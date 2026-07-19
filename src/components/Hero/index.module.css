@@ -3,12 +3,13 @@
 
 .root {
   position: relative;
-  min-height: 100dvh;
+  min-height: calc(100dvh - (2 * var(--page-inset)));
   display: grid;
   grid-template-rows: auto 1fr;
   align-items: stretch;
   overflow: clip;
   background: var(--color-periwinkle);
+  border-radius: var(--radius-section);
 }
 
 .wordmark {

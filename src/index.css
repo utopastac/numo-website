@@ -20,7 +20,9 @@
   --radius-xl: 32px;
   --radius-phone: 44px;
   --radius-full: 9999px;
+  --radius-section: 12px;
 
+  --page-inset: 8px;
   --content-max: 1120px;
   --page-pad: clamp(2rem, 4vw, 4rem);
 }
@@ -49,7 +51,7 @@ body {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   color: var(--color-ink);
-  background: var(--color-paper);
+  background: var(--color-white);
 }
 
 img {

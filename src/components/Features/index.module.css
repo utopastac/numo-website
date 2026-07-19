@@ -3,7 +3,8 @@
 
 .root {
   padding: var(--space_10) var(--page-pad);
-  background: var(--color-mist);
+  border-radius: var(--radius-section);
+  overflow: clip;
 }
 
 .frame {
