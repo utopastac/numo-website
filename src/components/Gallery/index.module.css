@@ -1,19 +1,15 @@
 @import '@styles/breakpoints.css';
+@import '@styles/layout.css';
 
 .root {
   padding-block: var(--space_10);
   border-radius: var(--radius-section);
-
-  @mixin desktop-up {
-    padding-inline: var(--page-pad);
-    overflow: clip;
-  }
 }
 
 .list {
   list-style: none;
   margin: 0;
-  padding: 0 var(--page-pad);
+  @mixin content-frame;
   display: flex;
   gap: var(--space_3);
   align-items: flex-start;
@@ -23,9 +19,6 @@
   scrollbar-width: thin;
 
   @mixin desktop-up {
-    width: min(100%, var(--content-max));
-    margin-inline: auto;
-    padding: 0;
     overflow: visible;
     scroll-snap-type: none;
   }

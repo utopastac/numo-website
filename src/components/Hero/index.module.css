@@ -1,34 +1,20 @@
 @import '@styles/breakpoints.css';
 @import '@styles/typography.css';
+@import '@styles/layout.css';
 
 .root {
   position: relative;
   min-height: calc(100dvh - (2 * var(--page-inset)));
   display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: stretch;
+  align-items: center;
   overflow: clip;
   background: var(--color-periwinkle);
   border-radius: var(--radius-section);
 }
 
-.wordmark {
-  width: min(140px, 42vw);
-  height: auto;
-  justify-self: start;
-  margin: var(--space_3) 0 0 var(--page-pad);
-  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-  @mixin desktop-up {
-    margin-top: var(--space_4);
-    margin-left: max(var(--page-pad), calc((100% - var(--content-max)) / 2 + var(--page-pad)));
-  }
-}
-
 .frame {
-  width: min(100%, var(--content-max));
-  margin-inline: auto;
-  padding: var(--space_4) var(--page-pad) var(--space_4);
+  @mixin content-frame;
+  padding-block: var(--space_4);
   display: grid;
   gap: var(--space_5);
   align-items: center;

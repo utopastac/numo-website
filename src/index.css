@@ -1,6 +1,7 @@
 @import './styles/breakpoints.css';
 @import './styles/colors.css';
 @import './styles/typography.css';
+@import './styles/layout.css';
 
 :root {
   --space_0_5: 0.5rem;

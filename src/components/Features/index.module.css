@@ -1,15 +1,15 @@
 @import '@styles/breakpoints.css';
 @import '@styles/typography.css';
+@import '@styles/layout.css';
 
 .root {
-  padding: var(--space_10) var(--page-pad);
+  padding-block: var(--space_10);
   border-radius: var(--radius-section);
   overflow: clip;
 }
 
 .frame {
-  width: min(100%, var(--content-max));
-  margin-inline: auto;
+  @mixin content-frame;
   display: grid;
   gap: var(--space_6);
 

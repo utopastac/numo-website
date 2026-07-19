@@ -1,46 +1,12 @@
-import { useEffect, useRef } from 'react'
 import { HERO_POSTER, HERO_VIDEO } from '@/data/screenshots'
+import { useAutoplayVideo } from '@/hooks/useAutoplayVideo'
 import styles from './index.module.css'
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    // Browsers require muted to be set on the element before play() for autoplay.
-    video.defaultMuted = true
-    video.muted = true
-    video.playsInline = true
-    video.loop = false
-    video.playbackRate = 1.35
-
-    const tryPlay = () => {
-      void video.play().catch(() => {
-        // Autoplay can still fail (e.g. low-power mode); poster remains visible.
-      })
-    }
-
-    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
-      tryPlay()
-    } else {
-      video.addEventListener('canplay', tryPlay, { once: true })
-    }
-
-    return () => video.removeEventListener('canplay', tryPlay)
-  }, [])
+  const videoRef = useAutoplayVideo(1.35)
 
   return (
-    <header className={styles.root}>
-      <img
-        className={styles.wordmark}
-        src="/images/logo-light.png"
-        alt="numo"
-        width={280}
-        height={61}
-      />
-
+    <section className={styles.root}>
       <div className={styles.frame}>
         <div className={styles.copy}>
           <h1 className={styles.headline}>The simplest tracker for any number</h1>
@@ -81,6 +47,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   )
 }

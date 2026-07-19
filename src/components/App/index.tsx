@@ -1,3 +1,4 @@
+import { SiteHeader } from '@/components/SiteHeader'
 import { Hero } from '@/components/Hero'
 import { Features } from '@/components/Features'
 import { Gallery } from '@/components/Gallery'
@@ -8,6 +9,7 @@ import styles from './index.module.css'
 export function App() {
   return (
     <div className={styles.root}>
+      <SiteHeader />
       <Hero />
       <Features />
       <Companion />

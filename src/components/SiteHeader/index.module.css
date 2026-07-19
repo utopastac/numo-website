@@ -1,0 +1,33 @@
+@import '@styles/typography.css';
+@import '@styles/layout.css';
+
+.root {
+  @mixin content-frame;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space_2);
+  padding-block: var(--space_1);
+  flex-shrink: 0;
+}
+
+.wordmark {
+  width: min(120px, 36vw);
+  height: auto;
+}
+
+.download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.5rem;
+  padding: 0 var(--space_2);
+  border-radius: var(--radius-full);
+  background: var(--color-ink);
+  color: var(--color-white);
+  @mixin caption;
+  letter-spacing: 0.01em;
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+}

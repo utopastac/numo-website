@@ -1,0 +1,7 @@
+/* Shared content column — keep section backgrounds full-bleed; pad the frame. */
+
+@define-mixin content-frame {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+}
