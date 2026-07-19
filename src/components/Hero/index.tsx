@@ -14,6 +14,7 @@ export function Hero() {
     video.muted = true
     video.playsInline = true
     video.loop = false
+    video.playbackRate = 1.35
 
     const tryPlay = () => {
       void video.play().catch(() => {
