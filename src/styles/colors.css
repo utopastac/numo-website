@@ -1,0 +1,22 @@
+:root {
+  --color-brand: #3a72fb;
+  --color-brand-soft: color-mix(in srgb, var(--color-brand) 14%, white);
+
+  --color-ink: #0e0e10;
+  --color-ink-muted: color-mix(in srgb, var(--color-ink) 58%, transparent);
+  --color-ink-faint: color-mix(in srgb, var(--color-ink) 28%, transparent);
+
+  --color-paper: #f5f5f7;
+  --color-white: #ffffff;
+
+  --color-periwinkle: #c9cfe0;
+  --color-periwinkle-deep: #aeb6cf;
+  --color-sand: #e8decf;
+  --color-sage: #c7d6cc;
+  --color-sky: #c2d6e3;
+  --color-blush: #e6d4d6;
+  --color-butter: #ebe3b8;
+
+  --color-ring-track: color-mix(in srgb, var(--color-ink) 12%, transparent);
+  --color-ring-fill: var(--color-ink);
+}

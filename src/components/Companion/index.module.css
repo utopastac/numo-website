@@ -1,0 +1,44 @@
+@import '@styles/breakpoints.css';
+@import '@styles/typography.css';
+
+.root {
+  padding: var(--space_8) var(--page-pad);
+  background:
+    radial-gradient(80% 120% at 0% 50%, var(--color-sky) 0%, transparent 55%),
+    radial-gradient(70% 100% at 100% 40%, var(--color-blush) 0%, transparent 50%),
+    var(--color-paper);
+}
+
+.frame {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space_3);
+  align-items: center;
+
+  @mixin desktop-up {
+    grid-template-columns: auto 1fr;
+    gap: var(--space_5);
+  }
+}
+
+.icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space_1_5);
+  max-width: 42ch;
+}
+
+.heading {
+  @mixin heading-lg;
+}
+
+.lede {
+  @mixin body-lg;
+  color: var(--color-ink-muted);
+}

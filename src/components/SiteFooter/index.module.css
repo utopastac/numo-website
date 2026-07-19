@@ -1,0 +1,38 @@
+@import '@styles/typography.css';
+
+.root {
+  padding: var(--space_5) var(--page-pad) var(--space_6);
+  border-top: 1px solid var(--color-ink-faint);
+  background: var(--color-paper);
+}
+
+.frame {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space_2);
+}
+
+.wordmark {
+  width: 96px;
+  height: auto;
+  opacity: 0.85;
+}
+
+.meta {
+  @mixin caption;
+  color: var(--color-ink-muted);
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+
+  &:hover {
+    color: var(--color-ink);
+  }
+}

@@ -1,0 +1,81 @@
+@import './styles/breakpoints.css';
+@import './styles/colors.css';
+@import './styles/typography.css';
+
+:root {
+  --space_0_5: 0.5rem;
+  --space_1: 1rem;
+  --space_1_5: 1.5rem;
+  --space_2: 2rem;
+  --space_3: 3rem;
+  --space_4: 4rem;
+  --space_5: 5rem;
+  --space_6: 6rem;
+  --space_8: 8rem;
+  --space_10: 10rem;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-phone: 44px;
+  --radius-full: 9999px;
+
+  --content-max: 1120px;
+  --page-pad: clamp(2rem, 4vw, 4rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 8px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd, ul, ol {
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
