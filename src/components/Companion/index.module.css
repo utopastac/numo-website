@@ -2,11 +2,8 @@
 @import '@styles/typography.css';
 
 .root {
-  padding: var(--space_8) var(--page-pad);
-  background:
-    radial-gradient(80% 120% at 0% 50%, var(--color-sky) 0%, transparent 55%),
-    radial-gradient(70% 100% at 100% 40%, var(--color-blush) 0%, transparent 50%),
-    var(--color-paper);
+  padding: var(--space_10) var(--page-pad);
+  background: var(--color-sand);
 }
 
 .frame {
@@ -40,5 +37,5 @@
 
 .lede {
   @mixin body-lg;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
 }

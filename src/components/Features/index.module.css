@@ -2,13 +2,8 @@
 @import '@styles/typography.css';
 
 .root {
-  padding: var(--space_8) var(--page-pad);
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--color-paper) 70%, var(--color-periwinkle)) 0%,
-      var(--color-paper) 100%
-    );
+  padding: var(--space_10) var(--page-pad);
+  background: var(--color-mist);
 }
 
 .frame {
@@ -37,7 +32,7 @@
 
 .lede {
   @mixin body;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
 }
 
 .list {
@@ -52,7 +47,19 @@
   display: grid;
   gap: var(--space_1);
   padding-block: var(--space_1);
-  border-top: 1px solid var(--color-ink-faint);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space_1_5);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--color-ink);
 }
 
 .title {
@@ -61,6 +68,7 @@
 
 .body {
   @mixin body;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   max-width: 42ch;
+  padding-left: calc(2.75rem + var(--space_1_5));
 }

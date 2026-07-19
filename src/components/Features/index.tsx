@@ -1,17 +1,26 @@
+import type { LucideIcon } from 'lucide-react'
+import { Lock, Plus, Target } from 'lucide-react'
 import styles from './index.module.css'
 
-const FEATURES = [
+const FEATURES: {
+  title: string
+  body: string
+  Icon: LucideIcon
+}[] = [
   {
     title: 'One-tap logging',
     body: 'Custom quick-add presets and a keypad for anything in between. Rapid taps batch into a single entry.',
+    Icon: Plus,
   },
   {
     title: 'Goals that fit',
     body: 'Count up to a target or down from a budget. Daily, weekly, or monthly resets with a clear progress ring.',
+    Icon: Target,
   },
   {
     title: 'Private by design',
     body: 'Everything stays on your devices. No accounts, no cloud sync, no HealthKit — just local counters you control.',
+    Icon: Lock,
   },
 ]
 
@@ -21,7 +30,7 @@ export function Features() {
       <div className={styles.frame}>
         <div className={styles.intro}>
           <h2 id="features-heading" className={styles.heading}>
-            Built for the numbers you actually care about.
+            Built for the numbers you actually care about
           </h2>
           <p className={styles.lede}>
             Multi-counter pager, history charts, templates for calories, protein, money, and water —
@@ -30,10 +39,13 @@ export function Features() {
         </div>
 
         <ul className={styles.list}>
-          {FEATURES.map((feature) => (
-            <li key={feature.title} className={styles.item}>
-              <h3 className={styles.title}>{feature.title}</h3>
-              <p className={styles.body}>{feature.body}</p>
+          {FEATURES.map(({ title, body, Icon }) => (
+            <li key={title} className={styles.item}>
+              <div className={styles.header}>
+                <Icon className={styles.icon} aria-hidden="true" strokeWidth={1.75} />
+                <h3 className={styles.title}>{title}</h3>
+              </div>
+              <p className={styles.body}>{body}</p>
             </li>
           ))}
         </ul>

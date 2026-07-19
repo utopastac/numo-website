@@ -2,7 +2,6 @@
 
 .root {
   padding: var(--space_5) var(--page-pad) var(--space_6);
-  border-top: 1px solid var(--color-ink-faint);
   background: var(--color-paper);
 }
 
@@ -19,12 +18,12 @@
 .wordmark {
   width: 96px;
   height: auto;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .meta {
   @mixin caption;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
 }
 
 .link {

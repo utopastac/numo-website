@@ -13,7 +13,7 @@ export function Companion() {
         />
         <div className={styles.copy}>
           <h2 id="companion-heading" className={styles.heading}>
-            Home Screen and wrist.
+            Home Screen and wrist
           </h2>
           <p className={styles.lede}>
             Interactive widgets for quick-add from your Home Screen, plus an Apple Watch app
