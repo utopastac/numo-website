@@ -3,27 +3,24 @@
 @import '@styles/layout.css';
 
 .root {
+  @mixin content-section;
   position: relative;
-  min-height: calc(100dvh - (2 * var(--page-inset)));
-  display: grid;
-  align-items: center;
   overflow: clip;
   background: var(--color-periwinkle);
   border-radius: var(--radius-section);
 }
 
 .frame {
-  @mixin content-frame;
-  padding-block: var(--space_4);
+  @mixin content-pad;
+  padding-block: var(--page-pad);
   display: grid;
   gap: var(--space_5);
-  align-items: center;
-  align-content: center;
+  align-items: start;
+  align-content: start;
 
   @mixin desktop-up {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     gap: var(--space_6);
-    padding-block: var(--space_4) var(--space_5);
   }
 }
 
@@ -59,7 +56,7 @@
   justify-content: center;
   min-height: 5.5rem;
   padding: 0 var(--space_3);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   background: var(--color-ink);
   color: var(--color-white);
   @mixin caption;
@@ -83,10 +80,6 @@
   border-radius: var(--radius-phone);
   padding: 10px;
   background: linear-gradient(160deg, #2a2a2e 0%, #121214 55%, #1c1c20 100%);
-  box-shadow:
-    0 40px 80px color-mix(in srgb, var(--color-ink) 18%, transparent),
-    0 12px 28px color-mix(in srgb, var(--color-ink) 10%, transparent);
-  animation: float 7s ease-in-out infinite;
 }
 
 .screenshot {
@@ -111,21 +104,7 @@
   }
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .device {
-    animation: none;
-  }
-
   .screenshot {
     display: none;
   }

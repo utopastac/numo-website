@@ -21,9 +21,10 @@
   --radius-xl: 32px;
   --radius-phone: 44px;
   --radius-full: 9999px;
-  --radius-section: 12px;
+  --radius-section: 24px;
 
   --page-inset: 8px;
+  --section-gap: 40px;
   --content-max: 1120px;
   --page-pad: clamp(2rem, 4vw, 4rem);
 }

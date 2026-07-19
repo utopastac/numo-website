@@ -3,14 +3,18 @@
 @import '@styles/layout.css';
 
 .root {
-  padding-block: var(--space_10);
+  @mixin content-section;
+  padding-block: var(--page-pad);
   background: var(--color-sand);
   border-radius: var(--radius-section);
   overflow: clip;
 }
 
 .frame {
-  @mixin content-frame;
+  @mixin content-pad;
+}
+
+.band {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +22,7 @@
 
   @mixin desktop-up {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
   }
 }
@@ -57,7 +61,7 @@
   flex: 0 1 36ch;
 
   @mixin desktop-up {
-    /* Sit immediately after the video — don't grow into leftover space */
+    /* Sit immediately after the video; don't grow into leftover space */
     flex: 0 0 auto;
   }
 }

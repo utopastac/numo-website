@@ -3,13 +3,14 @@
 @import '@styles/layout.css';
 
 .root {
-  padding-block: var(--space_10);
+  @mixin content-section;
+  padding-block: var(--page-pad);
   border-radius: var(--radius-section);
   overflow: clip;
 }
 
 .frame {
-  @mixin content-frame;
+  @mixin content-pad;
   display: grid;
   gap: var(--space_6);
 
@@ -41,19 +42,36 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: var(--space_4);
+  gap: 8px;
+  justify-items: start;
 }
 
 .item {
   display: grid;
   gap: var(--space_1);
-  padding-block: var(--space_1);
+  padding: var(--space_2);
+  border-radius: 16px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.sage {
+  background: var(--color-sage);
+}
+
+.sand {
+  background: var(--color-sand);
+}
+
+.sky {
+  background: var(--color-sky);
 }
 
 .header {
   display: flex;
-  align-items: center;
-  gap: var(--space_1_5);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space_1);
 }
 
 .icon {
@@ -65,11 +83,11 @@
 
 .title {
   @mixin heading-md;
+  font-weight: var(--font-weight-semibold);
 }
 
 .body {
   @mixin body;
   color: var(--color-ink);
   max-width: 42ch;
-  padding-left: calc(2.75rem + var(--space_1_5));
 }

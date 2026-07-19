@@ -2,13 +2,14 @@
 @import '@styles/layout.css';
 
 .root {
-  padding-block: var(--space_5) var(--space_6);
+  @mixin content-section;
+  padding-block: var(--page-pad);
   border-radius: var(--radius-section);
   overflow: clip;
 }
 
 .frame {
-  @mixin content-frame;
+  @mixin content-pad;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

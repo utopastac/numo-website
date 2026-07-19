@@ -2,14 +2,15 @@
 @import '@styles/layout.css';
 
 .root {
-  padding-block: var(--space_10);
+  @mixin content-section;
+  padding-block: var(--page-pad);
   border-radius: var(--radius-section);
 }
 
 .list {
   list-style: none;
   margin: 0;
-  @mixin content-frame;
+  @mixin content-pad;
   display: flex;
   gap: var(--space_3);
   align-items: flex-start;

@@ -1,9 +1,11 @@
 .root {
   min-height: 100dvh;
+  background: var(--color-white);
+}
+
+.main {
   padding: var(--page-inset);
   display: flex;
   flex-direction: column;
-  gap: var(--page-inset);
-  overflow-x: clip;
-  background: var(--color-white);
+  gap: var(--section-gap);
 }

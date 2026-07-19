@@ -11,8 +11,8 @@ export function Hero() {
         <div className={styles.copy}>
           <h1 className={styles.headline}>The simplest tracker for any number</h1>
           <p className={styles.lede}>
-            Calories, protein, money, water — or anything you track.
-            Local-first on iPhone, with widgets and Apple Watch.
+            Calories, protein, money, water, or anything you track.
+            Local first on iPhone, with widgets and Apple Watch.
           </p>
           <div className={styles.ctaRow}>
             <span className={styles.cta} aria-disabled="true">

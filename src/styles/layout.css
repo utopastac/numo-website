@@ -1,7 +1,18 @@
-/* Shared content column — keep section backgrounds full-bleed; pad the frame. */
+/* Section shell — same max width as the content column. */
+@define-mixin content-section {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+}
 
+/* Inner pad inside a content section (or a full-bleed header). */
 @define-mixin content-frame {
   width: min(100%, var(--content-max));
   margin-inline: auto;
+  padding-inline: var(--page-pad);
+}
+
+/* When the parent is already a content-section, only apply horizontal pad. */
+@define-mixin content-pad {
+  width: 100%;
   padding-inline: var(--page-pad);
 }

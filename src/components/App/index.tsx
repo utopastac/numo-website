@@ -10,11 +10,13 @@ export function App() {
   return (
     <div className={styles.root}>
       <SiteHeader />
-      <Hero />
-      <Features />
-      <Companion />
-      <Gallery />
-      <SiteFooter />
+      <div className={styles.main}>
+        <Hero />
+        <Features />
+        <Companion />
+        <Gallery />
+        <SiteFooter />
+      </div>
     </div>
   )
 }

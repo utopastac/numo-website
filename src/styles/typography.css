@@ -8,8 +8,8 @@
   --font-size-base: 2rem;
   --font-size-md: 2.25rem;
   --font-size-lg: 2.75rem;
-  --font-size-xl: 4rem;
-  --font-size-2xl: 5.5rem;
+  --font-size-xl: 5.5rem;
+  --font-size-2xl: 6.5rem;
   --font-size-3xl: 8rem;
   --font-size-hero: clamp(4.5rem, 8vw, 9rem);
 
