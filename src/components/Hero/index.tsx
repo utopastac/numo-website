@@ -8,8 +8,8 @@ export function Hero() {
           className={styles.icon}
           src="/images/figma/hero-icon.png"
           alt=""
-          width={152}
-          height={152}
+          width={104}
+          height={104}
         />
         <div className={styles.copy}>
           <h1 className={styles.headline}>
@@ -17,10 +17,12 @@ export function Hero() {
             <br />
             Count everything.
           </h1>
-          <p className={styles.lede}>
-            The simple, beautiful numbers tracker for your daily goals. Calories, water, savings,
-            workouts, or coffee. Tailored to your rhythm.
-          </p>
+          <div className={styles.ledeWrap}>
+            <p className={styles.lede}>
+              A simple, beautiful numbers tracker for your daily goals. Calories, water, savings,
+              workouts, or coffee. Tailored to your rhythm.
+            </p>
+          </div>
         </div>
       </div>
     </section>

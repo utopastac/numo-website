@@ -88,9 +88,3 @@
   letter-spacing: -0.02em;
   line-height: var(--line-height-none);
 }
-
-.caption {
-  @mixin body-large;
-  max-width: var(--width-column-half);
-  color: var(--color-text-primary);
-}

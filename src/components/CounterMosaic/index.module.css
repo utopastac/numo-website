@@ -25,6 +25,7 @@
   overflow: clip;
   border-radius: var(--radius-md);
   color: var(--color-text-primary);
+  transition: background-color 0.35s ease;
 
   @mixin mobile-down {
     &:nth-child(n + 5) {
@@ -123,14 +124,3 @@
   line-height: var(--line-height-none);
   white-space: nowrap;
 }
-
-.sky { background: var(--theme-sky); }
-.lavender { background: var(--theme-lavender); }
-.steel { background: var(--theme-steel); }
-.sand { background: var(--theme-sand); }
-.sage { background: var(--theme-sage); }
-.peach { background: var(--theme-peach); }
-.white { background: var(--theme-white); }
-.butter { background: var(--theme-butter); }
-.pink { background: var(--theme-pink); }
-.mint { background: var(--theme-mint); }

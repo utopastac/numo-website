@@ -1,33 +1,20 @@
-export type ThemeKey =
-  | 'sky'
-  | 'lavender'
-  | 'steel'
-  | 'sand'
-  | 'sage'
-  | 'peach'
-  | 'white'
-  | 'butter'
-  | 'pink'
-  | 'mint'
-
 export type MosaicCounter = {
   name: string
   unit: string
   value: string
   remaining: string
   progress: number
-  theme: ThemeKey
 }
 
 export const MOSAIC_COUNTERS: MosaicCounter[] = [
-  { name: 'Calories', unit: 'kCal', value: '70', remaining: '520 remaining', progress: 0.12, theme: 'sky' },
-  { name: 'Workouts', unit: 'sessions', value: '12', remaining: '8 to go', progress: 0.6, theme: 'lavender' },
-  { name: 'Books', unit: 'read', value: '20', remaining: '12 to go', progress: 0.62, theme: 'steel' },
-  { name: 'Protein', unit: 'g', value: '70', remaining: '80 to go', progress: 0.46, theme: 'sand' },
-  { name: 'Water', unit: 'glasses', value: '4', remaining: '4 to go', progress: 0.5, theme: 'sage' },
-  { name: 'Vegetables', unit: 'servings', value: '2', remaining: '4 to go', progress: 0.33, theme: 'peach' },
-  { name: 'Money', unit: '$', value: '2000', remaining: '520 remaining', progress: 0.8, theme: 'white' },
-  { name: 'Coffee', unit: 'cups', value: '1', remaining: '2 remaining', progress: 0.33, theme: 'butter' },
+  { name: 'Calories', unit: 'kCal', value: '70', remaining: '520 remaining', progress: 0.12 },
+  { name: 'Workouts', unit: 'sessions', value: '12', remaining: '8 to go', progress: 0.6 },
+  { name: 'Books', unit: 'read', value: '20', remaining: '12 to go', progress: 0.62 },
+  { name: 'Protein', unit: 'g', value: '70', remaining: '80 to go', progress: 0.46 },
+  { name: 'Water', unit: 'glasses', value: '4', remaining: '4 to go', progress: 0.5 },
+  { name: 'Vegetables', unit: 'servings', value: '2', remaining: '4 to go', progress: 0.33 },
+  { name: 'Money', unit: '$', value: '2000', remaining: '520 remaining', progress: 0.8 },
+  { name: 'Coffee', unit: 'cups', value: '1', remaining: '2 remaining', progress: 0.33 },
 ]
 
 export const FEATURE_SLIDES = [

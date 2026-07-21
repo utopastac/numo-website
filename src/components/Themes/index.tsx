@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ProgressRing } from '@/numo/ProgressRing'
 import {
   THEME_LIST_ITEMS,
@@ -8,8 +7,12 @@ import {
 } from '@/data/themes'
 import styles from './index.module.css'
 
-export function Themes() {
-  const [selected, setSelected] = useState<ThemePaletteName>('Muted')
+type Props = {
+  selected: ThemePaletteName
+  onSelect: (palette: ThemePaletteName) => void
+}
+
+export function Themes({ selected, onSelect }: Props) {
   const swatches = THEME_PALETTES[selected]
 
   return (
@@ -30,7 +33,7 @@ export function Themes() {
                   role="tab"
                   aria-selected={isSelected}
                   className={isSelected ? `${styles.pill} ${styles.pillSelected}` : styles.pill}
-                  onClick={() => setSelected(pill)}
+                  onClick={() => onSelect(pill)}
                 >
                   {pill}
                 </button>
@@ -63,8 +66,6 @@ export function Themes() {
             })}
           </ul>
         </div>
-
-        <p className={styles.caption}>Your metrics, visualised and instantly accessible.</p>
       </div>
     </section>
   )
