@@ -1,27 +1,52 @@
+/* Design tokens — mirrored from Figma Numo website variables. */
 :root {
-  --color-brand: #3a72fb;
-  --color-brand-soft: color-mix(in srgb, var(--color-brand) 14%, white);
+  /* Semantic */
+  --color-background-primary: #ffffff;
+  --color-background-subtle: #f2f2f2;
+  --color-surface-default: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-secondary: rgb(0 0 0 / 0.75);
+  --color-text-tertiary: rgb(0 0 0 / 0.5);
+  --color-button-fill: #000000;
+  --color-button-label: #ffffff;
+  --color-border-default: rgb(0 0 0 / 0.4);
+  --color-divider-default: #000000;
+  --color-indicator-track: rgb(0 0 0 / 0.2);
+  --color-indicator-fill: #000000;
+  --color-logo-fill: #000000;
+  --color-accent-indigo: #6155f5;
+  --color-header-title: #000000;
+  --color-display-text: #000000;
+  --color-entry-value: #000000;
+  --color-entry-meta: #000000;
 
-  --color-ink: #000000;
-  --color-ink-muted: #000000;
-  --color-ink-faint: color-mix(in srgb, var(--color-ink) 28%, transparent);
+  /* Theme palette */
+  --theme-sky: #bccfe6;
+  --theme-lavender: #c4bfda;
+  --theme-steel: #b4bcce;
+  --theme-sand: #d9cebd;
+  --theme-sage: #bdd4be;
+  --theme-peach: #deb5a8;
+  --theme-white: #f2f0ed;
+  --theme-butter: #ddd9aa;
+  --theme-pink: #e8b4be;
+  --theme-mint: #c8deb4;
 
-  --color-white: #ffffff;
-
-  /* Counter palette (light) — from CounterPaletteData */
-  --color-periwinkle: #c9cfe0;
-  --color-sand: #e8decf;
-  --color-lime: #d6e0a8;
-  --color-mist: #f5f5f7;
-  --color-blush: #e6d4d6;
-  --color-sage: #c7d6cc;
-  --color-sky: #c2d6e3;
-  --color-clay: #e0c4b2;
-  --color-slate: #bfc7d4;
-  --color-butter: #ebe3b8;
-
-  --color-paper: var(--color-mist);
-
-  --color-ring-track: color-mix(in srgb, var(--color-ink) 12%, transparent);
-  --color-ring-fill: var(--color-ink);
+  /* Shorthand aliases used across marketing components */
+  --color-white: var(--color-background-primary);
+  --color-ink: var(--color-text-primary);
+  --color-ink-muted: var(--color-text-secondary);
+  --color-ink-faint: var(--color-text-tertiary);
+  --color-paper: var(--theme-white);
+  --color-sky: var(--theme-sky);
+  --color-sand: var(--theme-sand);
+  --color-sage: var(--theme-sage);
+  --color-butter: var(--theme-butter);
+  --color-peach: var(--theme-peach);
+  --color-mint: var(--theme-mint);
+  --color-lavender: var(--theme-lavender);
+  --color-steel: var(--theme-steel);
+  --color-pink: var(--theme-pink);
+  --color-ring-track: var(--color-indicator-track);
+  --color-ring-fill: var(--color-indicator-fill);
 }

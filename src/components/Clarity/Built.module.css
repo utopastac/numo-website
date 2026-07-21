@@ -1,0 +1,208 @@
+@import '@styles/breakpoints.css';
+@import '@styles/typography.css';
+@import '@styles/layout.css';
+
+.root {
+  @mixin content-section;
+  padding-block: var(--spacing-12x) 12.5rem;
+}
+
+.frame {
+  @mixin content-pad;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5x);
+}
+
+.heading {
+  @mixin display-md;
+  max-width: var(--width-text-wide);
+}
+
+.grid {
+  display: grid;
+  gap: var(--column-gutter);
+  grid-template-columns: 1fr;
+
+  @mixin desktop-up {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42rem;
+  padding: var(--spacing-5x);
+  border-radius: var(--radius-2xl);
+  background: var(--theme-white);
+}
+
+.panelNarrow {
+  padding: var(--spacing-4x);
+}
+
+.counterCard {
+  width: min(100%, 48.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-radius: var(--radius-xl);
+  background: var(--theme-sand);
+  overflow: clip;
+}
+
+.counterHeader {
+  padding: var(--spacing-sm);
+}
+
+.counterTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--app-font-size-title);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-title);
+  line-height: var(--line-height-none);
+}
+
+.counterBody {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding-inline: var(--spacing-sm);
+}
+
+.counterCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.counterValue {
+  font-family: var(--font-family-primary);
+  font-size: var(--app-font-size-display-large);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-none);
+}
+
+.counterMeta {
+  font-family: var(--font-family-primary);
+  font-size: var(--app-font-size-title);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-title);
+  line-height: var(--line-height-none);
+}
+
+.presets {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+}
+
+.preset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5rem;
+  border-radius: var(--radius-md);
+  background: var(--color-button-fill);
+  color: var(--theme-sky);
+  font-family: var(--font-family-primary);
+  font-size: var(--app-font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.widget {
+  width: min(100%, 20.6rem);
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  justify-content: flex-end;
+  padding: 2.25rem;
+  border-radius: 3.5rem;
+  background: var(--theme-sand);
+  box-shadow:
+    inset 0 1px 0 rgb(26 26 26 / 0.35),
+    inset 0 -1px 0 rgb(26 26 26 / 0.35);
+}
+
+.widgetLabel,
+.widgetMeta {
+  font-family: var(--font-family-primary);
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-none);
+}
+
+.widgetMeta {
+  font-size: 1.75rem;
+}
+
+.widgetValue {
+  font-family: var(--font-family-primary);
+  font-size: 5rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-none);
+}
+
+.watch {
+  width: min(100%, 25.6rem);
+  min-height: 31.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2x);
+  padding: 2rem;
+  border-radius: 2.5rem;
+  background: #595102;
+  color: #ffffff;
+}
+
+.watchTime {
+  align-self: flex-end;
+  font-size: 2.125rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.watchCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+}
+
+.watchLabel {
+  font-size: 2.125rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.watchValue {
+  font-size: 5rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-none);
+}
+
+.watchMeta {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.caption {
+  @mixin body-large;
+  color: var(--color-text-primary);
+}

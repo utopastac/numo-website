@@ -3,37 +3,57 @@
 
 .root {
   @mixin content-section;
-  padding-block: var(--page-pad);
-  border-radius: var(--radius-section);
-  overflow: clip;
+  padding-block: var(--spacing-12x) var(--padding-xl);
 }
 
 .frame {
   @mixin content-pad;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: var(--space_2);
+  gap: var(--spacing-4x);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2x);
+  width: min(100%, var(--width-column-third));
 }
 
 .wordmark {
-  width: 96px;
+  width: 9.25rem;
   height: auto;
-  opacity: 1;
+}
+
+.tagline {
+  @mixin caption;
+  color: var(--color-text-secondary);
+}
+
+.compat {
+  @mixin caption;
+  color: var(--color-text-tertiary);
 }
 
 .meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   @mixin caption;
-  color: var(--color-ink);
+  margin-left: auto;
+}
+
+.credit {
+  color: var(--color-text-primary);
+}
+
+.copy {
+  color: var(--color-text-secondary);
 }
 
 .link {
   text-decoration: underline;
-  text-underline-offset: 0.18em;
-  text-decoration-thickness: 1px;
-
-  &:hover {
-    color: var(--color-ink);
-  }
+  text-underline-offset: 0.2em;
 }

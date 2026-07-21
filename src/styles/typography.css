@@ -1,85 +1,148 @@
+/* Type tokens — Figma Display + App scales (1rem = 8px). */
+@import './breakpoints.css';
+
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, sans-serif;
   --font-display: var(--font-sans);
-  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-family-primary: var(--font-sans);
 
-  --font-size-xs: 1.5rem;
-  --font-size-sm: 1.75rem;
-  --font-size-base: 2rem;
-  --font-size-md: 2.25rem;
-  --font-size-lg: 2.75rem;
-  --font-size-xl: 5.5rem;
-  --font-size-2xl: 6.5rem;
-  --font-size-3xl: 8rem;
-  --font-size-hero: clamp(4.5rem, 8vw, 9rem);
+  /* Marketing / Display — desktop */
+  --font-size-caption: 2rem; /* 16 */
+  --font-size-body: 2.25rem; /* 18 */
+  --font-size-body-large: 2.75rem; /* 22 */
+  --font-size-title: 3rem; /* 24 */
+  --font-size-display: 7rem; /* 56 */
+  --font-size-display-large: 10rem; /* 80 */
 
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  /* App-scoped (used by embedded Numo UI) */
+  --app-font-size-caption: 1.75rem; /* 14 */
+  --app-font-size-body: 2rem; /* 16 */
+  --app-font-size-body-large: 2.25rem; /* 18 */
+  --app-font-size-title: 3rem; /* 24 */
+  --app-font-size-display-large: 10rem; /* 80 */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 510;
+  --font-weight-semibold: 590;
+
+  --line-height-none: 1;
+  --line-height-tight: 1.3;
+  --line-height-body: 1.35;
+
+  --letter-spacing-display-lg: -0.03em;
+  --letter-spacing-display: -0.02em;
+  --letter-spacing-title: -0.02em;
+  --letter-spacing-body: -0.015em;
+
+  /* Compat */
+  --font-size-base: var(--font-size-body);
+  --font-size-sm: var(--font-size-caption);
+  --font-size-md: var(--font-size-body-large);
+  --font-size-lg: var(--font-size-title);
+  --font-size-xl: var(--font-size-display);
+  --font-size-2xl: var(--font-size-display);
+  --font-size-3xl: var(--font-size-display-large);
+  --font-size-hero: var(--font-size-display-large);
+  --font-weight-normal: var(--font-weight-regular);
   --font-weight-bold: 700;
-
-  --line-height-tight: 0.92;
-  --line-height-snug: 1.15;
-  --line-height-normal: 1.45;
-  --line-height-relaxed: 1.6;
-
-  --letter-spacing-tight: -0.04em;
-  --letter-spacing-snug: -0.025em;
-  --letter-spacing-normal: -0.01em;
+  --line-height-snug: var(--line-height-tight);
+  --line-height-normal: var(--line-height-body);
+  --line-height-relaxed: var(--line-height-body);
+  --letter-spacing-tight: var(--letter-spacing-display-lg);
+  --letter-spacing-snug: var(--letter-spacing-display);
+  --letter-spacing-normal: var(--letter-spacing-body);
 }
 
-@define-mixin display {
-  font-family: var(--font-display);
-  font-size: var(--font-size-hero);
+@mixin mobile-down {
+  :root {
+    --font-size-caption: 1.75rem; /* 14 */
+    --font-size-body: 2rem; /* 16 */
+    --font-size-body-large: 2.25rem; /* 18 */
+    --font-size-title: 2.5rem; /* 20 */
+    --font-size-display: 4.5rem; /* 36 */
+    --font-size-display-large: 6rem; /* 48 */
+
+    --app-font-size-caption: 1.5rem; /* 12 */
+    --app-font-size-body: 1.75rem; /* 14 */
+    --app-font-size-body-large: 2rem; /* 16 */
+    --app-font-size-title: 2.5rem; /* 20 */
+    --app-font-size-display-large: 6rem; /* 48 */
+  }
+}
+
+@define-mixin display-lg {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-display-large);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-display-lg);
 }
 
-@define-mixin heading-xl {
-  font-family: var(--font-display);
-  font-size: var(--font-size-2xl);
+@define-mixin display-md {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-display);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-snug);
-  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-display);
 }
 
-@define-mixin heading-lg {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-xl);
+@define-mixin title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-title);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-snug);
-  letter-spacing: var(--letter-spacing-snug);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-title);
 }
 
-@define-mixin heading-md {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-lg);
+@define-mixin body-large {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body-large);
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-snug);
-  letter-spacing: var(--letter-spacing-snug);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
 }
 
 @define-mixin body {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
-}
-
-@define-mixin body-lg {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-relaxed);
-  letter-spacing: var(--letter-spacing-normal);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
 }
 
 @define-mixin caption {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+}
+
+@define-mixin button-label {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+}
+
+/* Legacy mixin names */
+@define-mixin display {
+  @mixin display-lg;
+}
+
+@define-mixin heading-xl {
+  @mixin display-md;
+}
+
+@define-mixin heading-lg {
+  @mixin display-md;
+}
+
+@define-mixin heading-md {
+  @mixin title;
+}
+
+@define-mixin body-lg {
+  @mixin body-large;
 }

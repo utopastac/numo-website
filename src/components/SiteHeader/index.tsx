@@ -1,19 +1,31 @@
+import { useEffect, useState } from 'react'
+import { Button } from '@/components/Button'
 import styles from './index.module.css'
 
 export function SiteHeader() {
+  const [compact, setCompact] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => {
+      setCompact(window.scrollY > 16)
+    }
+
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <header className={styles.root}>
+    <header className={styles.root} data-compact={compact ? 'true' : undefined}>
       <div className={styles.inner}>
         <img
           className={styles.wordmark}
           src="/images/logo-light.png"
           alt="numo"
-          width={160}
-          height={35}
+          width={111}
+          height={24}
         />
-        <span className={styles.download} aria-disabled="true">
-          Download on iOS
-        </span>
+        <Button className={styles.cta} />
       </div>
     </header>
   )

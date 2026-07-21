@@ -19,9 +19,16 @@ export type NumoCounter = {
 }
 
 export const PALETTE = {
-  periwinkle: '#c9cfe0',
-  sand: '#e8decf',
-  lime: '#d6e0a8',
+  sky: '#bccfe6',
+  sand: '#d9cebd',
+  mint: '#c8deb4',
+  lavender: '#c4bfda',
+  steel: '#b4bcce',
+  sage: '#bdd4be',
+  peach: '#deb5a8',
+  white: '#f2f0ed',
+  butter: '#ddd9aa',
+  pink: '#e8b4be',
 } as const
 
 export const PRESETS = {
@@ -48,8 +55,13 @@ export function createSampleCounters(): NumoCounter[] {
       goal: 2200,
       direction: 'countDown',
       presets: [...PRESETS.calories],
-      surface: PALETTE.periwinkle,
-      entries: [entry('c1', 1000, 180)],
+      surface: PALETTE.sky,
+      entries: [
+        entry('c1', 1000, 180),
+        entry('c2', 500, 120),
+        entry('c3', 400, 60),
+        entry('c4', 124, 30),
+      ],
     },
     {
       id: 'protein',
@@ -73,7 +85,7 @@ export function createSampleCounters(): NumoCounter[] {
       goal: 3000,
       direction: 'countDown',
       presets: [...PRESETS.money],
-      surface: PALETTE.lime,
+      surface: PALETTE.mint,
       entries: [entry('m1', 900, 400)],
     },
   ]

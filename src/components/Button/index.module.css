@@ -1,0 +1,15 @@
+@import '@styles/typography.css';
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2x) var(--spacing-4x);
+  border-radius: var(--radius-md);
+  background: var(--color-button-fill);
+  color: var(--color-button-label);
+  @mixin button-label;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+}

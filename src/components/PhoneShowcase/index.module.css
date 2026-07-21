@@ -1,0 +1,60 @@
+@import '@styles/breakpoints.css';
+@import '@styles/layout.css';
+
+.root {
+  @mixin content-section;
+}
+
+.frame {
+  @mixin content-pad;
+}
+
+.band {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-block: var(--spacing-5x);
+  padding-inline: var(--spacing-sm);
+  border-radius: var(--radius-2xl);
+  background: var(--theme-sky);
+  overflow: clip;
+
+  @mixin desktop-up {
+    padding-block: var(--spacing-12x);
+  }
+}
+
+.device {
+  width: min(100%, 50.25rem, calc(80vh * 390 / 844));
+  max-height: 80vh;
+  border-radius: var(--radius-phone);
+  overflow: clip;
+  background: var(--color-background-primary);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 0.12);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.poster {
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video {
+    display: none;
+  }
+
+  .poster {
+    display: block;
+  }
+}

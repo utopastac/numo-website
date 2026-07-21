@@ -1,0 +1,96 @@
+@import '@styles/breakpoints.css';
+@import '@styles/typography.css';
+@import '@styles/layout.css';
+
+.root {
+  @mixin content-section;
+  padding-block: var(--spacing-12x) 12.5rem;
+}
+
+.frame {
+  @mixin content-pad;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5x);
+}
+
+.heading {
+  @mixin display-md;
+  max-width: var(--width-text-wide);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3x);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.pill {
+  padding: var(--spacing-md) var(--spacing-2x);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  @mixin button-label;
+  color: var(--color-text-primary);
+  background: transparent;
+}
+
+.pillSelected {
+  background: var(--color-text-primary);
+  color: var(--color-surface-default);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-sm);
+  grid-template-columns: 1fr;
+
+  @mixin desktop-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-height: 6rem;
+  padding: var(--padding-small);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease;
+
+  & svg {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.name {
+  flex: 1;
+  font-family: var(--font-family-primary);
+  font-size: var(--app-font-size-body-large);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-none);
+}
+
+.value {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-none);
+}
+
+.caption {
+  @mixin body-large;
+  max-width: var(--width-column-half);
+  color: var(--color-text-primary);
+}

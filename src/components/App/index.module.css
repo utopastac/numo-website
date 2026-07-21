@@ -1,11 +1,9 @@
 .root {
   min-height: 100dvh;
-  background: var(--color-white);
+  background: var(--color-background-primary);
 }
 
 .main {
-  padding: var(--page-inset);
   display: flex;
   flex-direction: column;
-  gap: var(--section-gap);
 }

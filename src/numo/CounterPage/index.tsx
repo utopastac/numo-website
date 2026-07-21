@@ -38,6 +38,7 @@ export function CounterPage({
         {
           '--numo-surface': counter.surface,
           '--numo-ring-outline': counter.surface,
+          '--numo-interactive-fg': counter.surface,
         } as CSSProperties
       }
     >
