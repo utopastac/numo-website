@@ -35,7 +35,7 @@ export function ClarityBuilt() {
             </div>
           </div>
         </div>
-        <p className={styles.caption}>Your metrics, visualised and instantly accessible.</p>
+        <p className={styles.caption}>Your metrics, visualised and instantly accessible</p>
       </article>
 
       <article className={styles.feature}>

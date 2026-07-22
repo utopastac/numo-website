@@ -6,7 +6,7 @@ const ITEMS = [
     src: '/images/figma/clarity-metrics.png',
     width: 386,
     height: 256,
-    caption: 'Your metrics, visualised and instantly accessible.',
+    caption: 'Your metrics, visualised and instantly accessible',
     alt: 'Calories counter with progress ring and quick-add grid',
   },
   {
