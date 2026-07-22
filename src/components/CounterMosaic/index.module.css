@@ -23,7 +23,7 @@
   container-type: inline-size;
   min-width: 0;
   overflow: clip;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   color: var(--color-text-primary);
   transition: background 0.35s ease;
 
@@ -39,7 +39,7 @@
   --mosaic-scale: 0.75;
   --mosaic-space: calc(var(--spacing-sm) * var(--mosaic-scale));
   --mosaic-space-xs: calc(var(--spacing-xs) * var(--mosaic-scale));
-  --mosaic-pad: var(--spacing-md);
+  --mosaic-pad: var(--spacing-2x);
   /* Lock to desktop App type sizes so mobile marketing tokens don't shrink the cards. */
   --mosaic-title: calc(3rem * var(--mosaic-scale));
   --mosaic-display: calc(10rem * var(--mosaic-scale));
@@ -70,7 +70,7 @@
   gap: var(--mosaic-space-xs);
   font-family: var(--font-family-primary);
   font-size: var(--mosaic-title);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-title);
   line-height: var(--line-height-none);
   color: inherit;
@@ -112,6 +112,7 @@
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-title);
   line-height: var(--line-height-none);
+  padding-block: var(--spacing-xs);
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
 }
