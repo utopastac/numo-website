@@ -29,7 +29,7 @@ export function App() {
         <Themes selected={palette} onSelect={setPalette} />
         <Features />
         <FinalCTA />
-        <Gallery />
+        <Gallery palette={palette} />
         <SiteFooter />
       </main>
       <ScrollRing />

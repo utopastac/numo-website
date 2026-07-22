@@ -11,19 +11,10 @@ export function Hero() {
           width={104}
           height={104}
         />
-        <div className={styles.copy}>
-          <h1 className={styles.headline}>
-            Track anything,
-            <br />
-            count everything
-          </h1>
-          <div className={styles.ledeWrap}>
-            <p className={styles.lede}>
-              A simple, beautiful numbers tracker for your daily goals. Calories, water, savings,
-              workouts, or coffee. Tailored to your rhythm.
-            </p>
-          </div>
-        </div>
+        <h1 className={styles.lede}>
+          <span className={styles.brand}>Numo</span> is a simple, beautiful numbers tracker for
+          your daily goals. Calories, water, savings, workouts, or coffee. Tailored to your rhythm.
+        </h1>
       </div>
     </section>
   )

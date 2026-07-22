@@ -1,6 +1,14 @@
 import { ProgressRing } from '@/numo/ProgressRing'
 import { MOSAIC_COUNTERS } from '@/data/marketing'
-import { THEME_PALETTES, themeTrackColor, type ThemePaletteName } from '@/data/themes'
+import {
+  THEME_PALETTES,
+  themeAppearance,
+  themeCardBackground,
+  themeContentColor,
+  themeOutlineColor,
+  themeTrackColor,
+  type ThemePaletteName,
+} from '@/data/themes'
 import styles from './index.module.css'
 
 type Props = {
@@ -9,6 +17,7 @@ type Props = {
 
 export function CounterMosaic({ palette }: Props) {
   const swatches = THEME_PALETTES[palette]
+  const appearance = themeAppearance(palette)
 
   return (
     <section className={styles.root} aria-label="Counter examples">
@@ -16,13 +25,14 @@ export function CounterMosaic({ palette }: Props) {
         <ul className={styles.grid}>
           {MOSAIC_COUNTERS.map((counter, index) => {
             const swatch = swatches[index % swatches.length]
+            const content = themeContentColor(swatch, appearance)
             return (
               <li
                 key={`${counter.name}-${counter.unit}`}
                 className={styles.card}
                 style={{
-                  backgroundColor: swatch.hex,
-                  color: swatch.dark,
+                  background: themeCardBackground(swatch, appearance),
+                  color: content,
                 }}
               >
                 <div className={styles.face}>
@@ -45,9 +55,9 @@ export function CounterMosaic({ palette }: Props) {
                         }
                         size={72}
                         stroke={18}
-                        trackColor={themeTrackColor(swatch.dark)}
-                        fillColor={swatch.dark}
-                        outlineColor={swatch.hex}
+                        trackColor={themeTrackColor(content)}
+                        fillColor={content}
+                        outlineColor={themeOutlineColor(swatch, appearance)}
                         animated={false}
                       />
                     </div>

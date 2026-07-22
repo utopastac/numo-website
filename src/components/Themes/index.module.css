@@ -29,6 +29,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
+
+  @mixin mobile-down {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow-x: auto;
+    margin-inline: calc(var(--page-pad) * -1);
+    padding-inline: var(--page-pad);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .pill {
@@ -38,6 +53,7 @@
   @mixin button-label;
   color: var(--color-text-primary);
   background: transparent;
+  white-space: nowrap;
 }
 
 .pillSelected {
@@ -57,7 +73,7 @@
   aspect-ratio: 1;
   min-width: 0;
   border-radius: var(--radius-lg);
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 
   & svg {
     width: 6rem;

@@ -69,6 +69,7 @@
   padding: var(--padding-md);
   border-radius: var(--radius-2xl);
   overflow: clip;
+  transition: background 0.35s ease;
 
   @mixin desktop-up {
     height: 72rem;
@@ -83,14 +84,3 @@
   object-fit: contain;
   border-radius: var(--radius-2xl);
 }
-
-.sky { background: var(--theme-sky); }
-.lavender { background: var(--theme-lavender); }
-.sage { background: var(--theme-sage); }
-.sand { background: var(--theme-sand); }
-.peach { background: var(--theme-peach); }
-.mint { background: var(--theme-mint); }
-.butter { background: var(--theme-butter); }
-.steel { background: var(--theme-steel); }
-.pink { background: var(--theme-pink); }
-.white { background: var(--theme-white); }

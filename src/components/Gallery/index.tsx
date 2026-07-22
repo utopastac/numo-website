@@ -1,23 +1,22 @@
 import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { GALLERY_SLIDES } from '@/data/screenshots'
+import {
+  THEME_PALETTES,
+  themeAppearance,
+  themeCardBackground,
+  type ThemePaletteName,
+} from '@/data/themes'
 import styles from './index.module.css'
 
-const TONE_CLASS = {
-  sky: styles.sky,
-  lavender: styles.lavender,
-  sage: styles.sage,
-  sand: styles.sand,
-  peach: styles.peach,
-  mint: styles.mint,
-  butter: styles.butter,
-  steel: styles.steel,
-  pink: styles.pink,
-  white: styles.white,
-} as const
+type Props = {
+  palette: ThemePaletteName
+}
 
-export function Gallery() {
+export function Gallery({ palette }: Props) {
   const scrollerRef = useRef<HTMLUListElement>(null)
+  const swatches = THEME_PALETTES[palette]
+  const appearance = themeAppearance(palette)
 
   const scrollByCard = (direction: -1 | 1) => {
     const scroller = scrollerRef.current
@@ -56,20 +55,26 @@ export function Gallery() {
       </div>
 
       <ul className={styles.track} ref={scrollerRef}>
-        {GALLERY_SLIDES.map((slide) => (
-          <li key={slide.id} className={styles.slide}>
-            <div className={`${styles.visual} ${TONE_CLASS[slide.tone]}`}>
-              <img
-                className={styles.image}
-                src={slide.image}
-                alt={slide.alt}
-                width={390}
-                height={844}
-                loading="lazy"
-              />
-            </div>
-          </li>
-        ))}
+        {GALLERY_SLIDES.map((slide, index) => {
+          const swatch = swatches[index % swatches.length]
+          return (
+            <li key={slide.id} className={styles.slide}>
+              <div
+                className={styles.visual}
+                style={{ background: themeCardBackground(swatch, appearance) }}
+              >
+                <img
+                  className={styles.image}
+                  src={slide.image}
+                  alt={slide.alt}
+                  width={390}
+                  height={844}
+                  loading="lazy"
+                />
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

@@ -3,6 +3,10 @@ import {
   THEME_GRID_COUNT,
   THEME_PALETTES,
   THEME_PILLS,
+  themeAppearance,
+  themeCardBackground,
+  themeContentColor,
+  themeOutlineColor,
   themeTrackColor,
   type ThemePaletteName,
 } from '@/data/themes'
@@ -15,6 +19,7 @@ type Props = {
 
 export function Themes({ selected, onSelect }: Props) {
   const swatches = THEME_PALETTES[selected]
+  const appearance = themeAppearance(selected)
 
   return (
     <section className={styles.root} aria-labelledby="themes-heading">
@@ -46,20 +51,21 @@ export function Themes({ selected, onSelect }: Props) {
             {Array.from({ length: THEME_GRID_COUNT }, (_, index) => {
               const swatch = swatches[index % swatches.length]
               const progress = 0.28 + ((index * 0.17) % 0.64)
+              const content = themeContentColor(swatch, appearance)
               return (
                 <li
                   key={`${swatch.name}-${index}`}
                   className={styles.item}
-                  style={{ backgroundColor: swatch.hex }}
+                  style={{ background: themeCardBackground(swatch, appearance) }}
                   aria-label={swatch.name}
                 >
                   <ProgressRing
                     progress={progress}
                     size={64}
                     stroke={16}
-                    trackColor={themeTrackColor(swatch.dark)}
-                    fillColor={swatch.dark}
-                    outlineColor={swatch.hex}
+                    trackColor={themeTrackColor(content)}
+                    fillColor={content}
+                    outlineColor={themeOutlineColor(swatch, appearance)}
                     animated={false}
                   />
                 </li>

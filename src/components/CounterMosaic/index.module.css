@@ -25,7 +25,7 @@
   overflow: clip;
   border-radius: var(--radius-md);
   color: var(--color-text-primary);
-  transition: background-color 0.35s ease;
+  transition: background 0.35s ease;
 
   @mixin mobile-down {
     &:nth-child(n + 5) {
