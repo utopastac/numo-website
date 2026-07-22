@@ -1,6 +1,6 @@
 import { ProgressRing } from '@/numo/ProgressRing'
 import { MOSAIC_COUNTERS } from '@/data/marketing'
-import { THEME_PALETTES, type ThemePaletteName } from '@/data/themes'
+import { THEME_PALETTES, themeTrackColor, type ThemePaletteName } from '@/data/themes'
 import styles from './index.module.css'
 
 type Props = {
@@ -20,7 +20,10 @@ export function CounterMosaic({ palette }: Props) {
               <li
                 key={`${counter.name}-${counter.unit}`}
                 className={styles.card}
-                style={{ backgroundColor: swatch.hex }}
+                style={{
+                  backgroundColor: swatch.hex,
+                  color: swatch.dark,
+                }}
               >
                 <div className={styles.face}>
                   <header className={styles.header}>
@@ -40,8 +43,8 @@ export function CounterMosaic({ palette }: Props) {
                         progress={counter.progress}
                         size={72}
                         stroke={18}
-                        trackColor="var(--color-indicator-track)"
-                        fillColor="var(--color-indicator-fill)"
+                        trackColor={themeTrackColor(swatch.dark)}
+                        fillColor={swatch.dark}
                         outlineColor={swatch.hex}
                         animated={false}
                       />

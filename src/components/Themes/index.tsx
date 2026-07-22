@@ -1,8 +1,9 @@
 import { ProgressRing } from '@/numo/ProgressRing'
 import {
-  THEME_LIST_ITEMS,
+  THEME_GRID_COUNT,
   THEME_PALETTES,
   THEME_PILLS,
+  themeTrackColor,
   type ThemePaletteName,
 } from '@/data/themes'
 import styles from './index.module.css'
@@ -41,26 +42,26 @@ export function Themes({ selected, onSelect }: Props) {
             })}
           </div>
 
-          <ul className={styles.grid}>
-            {THEME_LIST_ITEMS.map((item, index) => {
+          <ul className={styles.grid} aria-label={`${selected} colour swatches`}>
+            {Array.from({ length: THEME_GRID_COUNT }, (_, index) => {
               const swatch = swatches[index % swatches.length]
+              const progress = 0.28 + ((index * 0.17) % 0.64)
               return (
                 <li
-                  key={item.name}
+                  key={`${swatch.name}-${index}`}
                   className={styles.item}
                   style={{ backgroundColor: swatch.hex }}
+                  aria-label={swatch.name}
                 >
                   <ProgressRing
-                    progress={0.75}
-                    size={32}
-                    stroke={8}
-                    trackColor="var(--color-indicator-track)"
-                    fillColor="var(--color-indicator-fill)"
+                    progress={progress}
+                    size={64}
+                    stroke={16}
+                    trackColor={themeTrackColor(swatch.dark)}
+                    fillColor={swatch.dark}
                     outlineColor={swatch.hex}
                     animated={false}
                   />
-                  <span className={styles.name}>{item.name}</span>
-                  <span className={styles.value}>{item.value}</span>
                 </li>
               )
             })}

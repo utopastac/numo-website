@@ -6,8 +6,15 @@ export function SiteHeader() {
   const [compact, setCompact] = useState(false)
 
   useEffect(() => {
+    let compact = false
+
     const onScroll = () => {
-      setCompact(window.scrollY > 16)
+      const y = window.scrollY
+      // Hysteresis so threshold flicker doesn't cancel the ease mid-way.
+      const next = compact ? y > 4 : y > 24
+      if (next === compact) return
+      compact = next
+      setCompact(next)
     }
 
     onScroll()

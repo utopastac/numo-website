@@ -2,28 +2,21 @@
 @import '@styles/typography.css';
 
 .root {
+  --header-t: 0;
+
   position: sticky;
   top: 0;
   z-index: 20;
   width: 100%;
   background: var(--color-background-primary);
-  transition: box-shadow 0.25s ease;
+  box-shadow: 0 1px 0 transparent;
+  transition:
+    --header-t 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 
   &[data-compact='true'] {
+    --header-t: 1;
     box-shadow: 0 1px 0 rgb(0 0 0 / 0.06);
-
-    .inner {
-      padding-block: var(--spacing-sm);
-    }
-
-    .wordmark {
-      width: 8rem;
-    }
-
-    .cta {
-      padding: var(--spacing-sm) var(--spacing-2x);
-      font-size: var(--font-size-caption);
-    }
   }
 }
 
@@ -33,18 +26,20 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-2x);
-  padding-block: var(--padding-md);
-  transition: padding-block 0.25s ease;
+  /* 4rem → 1rem */
+  padding-top: calc(4rem - 3rem * var(--header-t));
+  padding-bottom: calc(4rem - 3rem * var(--header-t));
 }
 
 .wordmark {
-  width: 13.875rem;
+  /* 13.875rem → 8rem */
+  width: calc(13.875rem - 5.875rem * var(--header-t));
   height: auto;
-  transition: width 0.25s ease;
 }
 
-.cta {
-  transition:
-    padding 0.25s ease,
-    font-size 0.25s ease;
+/* Beat Button.root padding/font so the shrink always owns these properties. */
+.root .cta {
+  padding-block: calc(2rem - 1rem * var(--header-t));
+  padding-inline: calc(4rem - 2rem * var(--header-t));
+  font-size: calc(2.25rem - 0.25rem * var(--header-t));
 }

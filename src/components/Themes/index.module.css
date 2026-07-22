@@ -48,43 +48,24 @@
 .grid {
   display: grid;
   gap: var(--spacing-sm);
-  grid-template-columns: 1fr;
-
-  @mixin desktop-up {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  min-height: 6rem;
-  padding: var(--padding-small);
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-width: 0;
   border-radius: var(--radius-lg);
-  color: var(--color-text-primary);
   transition: background-color 0.3s ease;
 
   & svg {
-    flex-shrink: 0;
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
+
+    @mixin desktop-up {
+      width: 8rem;
+      height: 8rem;
+    }
   }
-}
-
-.name {
-  flex: 1;
-  font-family: var(--font-family-primary);
-  font-size: var(--app-font-size-body-large);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.02em;
-  line-height: var(--line-height-none);
-}
-
-.value {
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-title);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.02em;
-  line-height: var(--line-height-none);
 }

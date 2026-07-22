@@ -30,8 +30,17 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3x);
+  align-items: flex-start;
   max-width: var(--width-column-half);
   min-width: 0;
+}
+
+.icon {
+  width: 13rem;
+  height: 13rem;
+  border-radius: var(--radius-3xl);
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .heading {

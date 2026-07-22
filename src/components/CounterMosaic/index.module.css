@@ -73,7 +73,7 @@
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--letter-spacing-title);
   line-height: var(--line-height-none);
-  color: var(--color-header-title);
+  color: inherit;
   white-space: nowrap;
 }
 
@@ -103,7 +103,7 @@
   gap: var(--mosaic-space);
   align-items: flex-start;
   min-width: 0;
-  color: var(--color-display-text);
+  color: inherit;
 }
 
 .value {

@@ -3,6 +3,12 @@
 @import './styles/typography.css';
 @import './styles/layout.css';
 
+@property --header-t {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
 :root {
   /* Spacing — Figma spacing/* + n× scale (1rem = 8px) */
   --spacing-2xs: 0.25rem; /* 2 */

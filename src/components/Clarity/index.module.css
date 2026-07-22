@@ -22,11 +22,15 @@
 .grid {
   display: grid;
   gap: var(--column-gutter);
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'metrics metrics'
+    'widgets watch';
   align-items: stretch;
 
   @mixin desktop-up {
     grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: 'metrics widgets watch';
   }
 }
 
@@ -36,6 +40,18 @@
   gap: var(--spacing-sm);
   min-width: 0;
   height: 100%;
+
+  &:nth-child(1) {
+    grid-area: metrics;
+  }
+
+  &:nth-child(2) {
+    grid-area: widgets;
+  }
+
+  &:nth-child(3) {
+    grid-area: watch;
+  }
 }
 
 .panel {
@@ -43,10 +59,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 42rem;
-  padding: var(--spacing-5x);
+  min-height: 28rem;
+  padding: var(--spacing-3x);
   border-radius: var(--radius-2xl);
   background: var(--theme-white);
+
+  @mixin desktop-up {
+    min-height: 42rem;
+    padding: var(--spacing-5x);
+  }
 }
 
 .image {

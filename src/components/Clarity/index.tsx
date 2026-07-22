@@ -14,7 +14,7 @@ const ITEMS = [
     src: '/images/figma/clarity-widget.png',
     width: 165,
     height: 165,
-    caption: 'Widgets',
+    caption: 'Homescreen widgets',
     alt: 'Home Screen calories widget',
   },
   {
@@ -22,7 +22,7 @@ const ITEMS = [
     src: '/images/figma/clarity-watch.png',
     width: 205,
     height: 251,
-    caption: 'Watch',
+    caption: 'Companion watch app',
     alt: 'Apple Watch calories complication',
   },
 ] as const
@@ -32,7 +32,7 @@ export function Clarity() {
     <section className={styles.root} aria-labelledby="clarity-heading">
       <div className={styles.frame}>
         <h2 id="clarity-heading" className={styles.heading}>
-          Designed for absolute clarity.
+          Designed for absolute clarity
         </h2>
 
         <div className={styles.grid}>
