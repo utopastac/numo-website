@@ -1,0 +1,78 @@
+@import '@styles/breakpoints.css';
+@import '@styles/layout.css';
+
+.root {
+  @mixin content-section;
+}
+
+.frame {
+  @mixin content-pad;
+}
+
+.band {
+  --watch-band: oklch(from var(--theme-peach) calc(l * 0.65) c h);
+  --watch-outline: oklch(from var(--watch-band) calc(l * 0.8) c h);
+
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--spacing-sm);
+  border-radius: var(--radius-2xl);
+  background: var(--theme-peach);
+  overflow: clip;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 27.5rem);
+}
+
+.strap {
+  width: 65%;
+  flex: 1 0 auto;
+  min-height: var(--spacing-5x);
+  background: var(--watch-band);
+
+  @mixin desktop-up {
+    min-height: var(--spacing-12x);
+  }
+}
+
+.device {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: 80vh;
+  border: 0.5rem solid var(--watch-outline);
+  border-radius: var(--radius-3xl);
+  overflow: clip;
+  background: var(--color-background-primary);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 0.12);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.poster {
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video {
+    display: none;
+  }
+
+  .poster {
+    display: block;
+  }
+}

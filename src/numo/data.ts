@@ -108,7 +108,10 @@ export function remainingLabel(counter: NumoCounter, total: number): string {
 
 export function ringProgress(counter: NumoCounter, total: number): number {
   if (counter.goal <= 0) return 0
-  return Math.min(Math.max(total / counter.goal, 0), 1)
+  const consumed = Math.min(Math.max(total / counter.goal, 0), 1)
+  // Count-down: full when nothing is used, empties as remaining drops.
+  if (counter.direction === 'countDown') return 1 - consumed
+  return consumed
 }
 
 export function formatAmount(value: number): string {

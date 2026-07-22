@@ -40,7 +40,9 @@ export function CounterMosaic({ palette }: Props) {
                         <p className={styles.remaining}>{counter.remaining}</p>
                       </div>
                       <ProgressRing
-                        progress={counter.progress}
+                        progress={
+                          counter.countDown ? 1 - counter.progress : counter.progress
+                        }
                         size={72}
                         stroke={18}
                         trackColor={themeTrackColor(swatch.dark)}

@@ -13,9 +13,9 @@ export function Hero() {
         />
         <div className={styles.copy}>
           <h1 className={styles.headline}>
-            Track anything
+            Track anything,
             <br />
-            Count everything
+            count everything
           </h1>
           <div className={styles.ledeWrap}>
             <p className={styles.lede}>

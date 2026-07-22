@@ -17,6 +17,58 @@ export const GALLERY_SCREENSHOTS = [
   '/images/list-compact.png',
   '/images/history.png',
   '/images/settings.png',
+  '/images/protein.png',
+] as const
+
+export type GalleryTone =
+  | 'sky'
+  | 'lavender'
+  | 'sage'
+  | 'sand'
+  | 'peach'
+  | 'mint'
+  | 'butter'
+  | 'steel'
+  | 'pink'
+  | 'white'
+
+export const GALLERY_SLIDES = [
+  {
+    id: 'list-normal',
+    image: '/images/list-normal.png',
+    tone: 'sky' as const,
+    alt: 'Numo dashboard with counter list',
+  },
+  {
+    id: 'compact',
+    image: '/images/compact.png',
+    tone: 'lavender' as const,
+    alt: 'Numo compact counter view',
+  },
+  {
+    id: 'list-compact',
+    image: '/images/list-compact.png',
+    tone: 'sage' as const,
+    alt: 'Numo compact list of counters',
+  },
+  {
+    id: 'history',
+    image: '/images/history.png',
+    tone: 'sand' as const,
+    alt: 'Numo history and progress chart',
+  },
+  {
+    id: 'settings',
+    image: '/images/settings.png',
+    tone: 'peach' as const,
+    alt: 'Numo settings screen',
+  },
+  {
+    id: 'protein',
+    image: '/images/protein.png',
+    tone: 'mint' as const,
+    alt: 'Numo protein counter detail',
+  },
 ] as const
 
 /** Apple Watch app screenshots. */
