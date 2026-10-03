@@ -51,7 +51,7 @@
     font-weight: var(--font-weight-semibold);
   }
 
-  & a {
+  & :where(p, li) a {
     color: var(--color-text-primary);
     text-underline-offset: 0.2em;
   }

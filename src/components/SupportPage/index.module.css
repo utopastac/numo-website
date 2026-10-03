@@ -18,6 +18,11 @@
   @mixin button-label;
   text-decoration: none;
 
+  &:link,
+  &:visited {
+    color: var(--color-button-label);
+  }
+
   &:hover {
     opacity: 0.88;
   }
