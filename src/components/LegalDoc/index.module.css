@@ -1,0 +1,58 @@
+@import '@styles/typography.css';
+@import '@styles/layout.css';
+
+.root {
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse 80% 45% at 8% -8%, var(--color-sky), transparent 55%),
+    radial-gradient(ellipse 70% 40% at 100% 0%, var(--color-sage), transparent 50%),
+    linear-gradient(180deg, var(--color-paper) 0%, var(--color-background-primary) 38%);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.doc {
+  @mixin content-column;
+  width: min(100%, calc(var(--width-text-medium) + (var(--page-pad) * 2)));
+  padding-block: var(--spacing-8x) var(--spacing-4x);
+  display: grid;
+  gap: var(--spacing-3x);
+
+  & h1 {
+    @mixin display-md;
+    color: var(--color-text-primary);
+  }
+
+  & h2 {
+    @mixin title;
+    margin-top: var(--spacing-2x);
+    color: var(--color-text-primary);
+  }
+
+  & p,
+  & li {
+    @mixin body;
+    color: var(--color-text-secondary);
+  }
+
+  & ul {
+    display: grid;
+    gap: var(--spacing-md);
+    padding-left: var(--spacing-3x);
+    list-style: disc;
+  }
+
+  & li strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  & a {
+    color: var(--color-text-primary);
+    text-underline-offset: 0.2em;
+  }
+}

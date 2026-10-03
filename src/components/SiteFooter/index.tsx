@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './index.module.css'
 
 export function SiteFooter() {
@@ -5,13 +6,15 @@ export function SiteFooter() {
     <footer className={styles.root}>
       <div className={styles.frame}>
         <div className={styles.brand}>
-          <img
-            className={styles.wordmark}
-            src="/images/logo-light.png"
-            alt="numo"
-            width={74}
-            height={16}
-          />
+          <Link to="/" aria-label="numo home">
+            <img
+              className={styles.wordmark}
+              src="/images/logo-light.png"
+              alt="numo"
+              width={74}
+              height={16}
+            />
+          </Link>
           <p className={styles.tagline}>
             A minimalist utility designed for tracking daily, weekly, and lifetime metrics on iOS.
           </p>
@@ -21,12 +24,12 @@ export function SiteFooter() {
         </div>
         <div className={styles.meta}>
           <nav className={styles.links} aria-label="Legal">
-            <a href="/support/" className={styles.link}>
+            <Link to="/support" className={styles.link}>
               Support
-            </a>
-            <a href="/privacy/" className={styles.link}>
+            </Link>
+            <Link to="/privacy" className={styles.link}>
               Privacy
-            </a>
+            </Link>
           </nav>
           <p className={styles.credit}>
             A product from{' '}

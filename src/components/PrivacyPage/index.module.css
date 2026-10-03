@@ -1,0 +1,6 @@
+@import '@styles/typography.css';
+
+.meta {
+  @mixin caption;
+  color: var(--color-text-tertiary);
+}

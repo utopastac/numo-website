@@ -20,6 +20,12 @@
   flex-direction: column;
   gap: var(--spacing-2x);
   width: min(100%, var(--width-column-third));
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+    width: fit-content;
+  }
 }
 
 .wordmark {

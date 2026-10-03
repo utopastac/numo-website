@@ -31,6 +31,13 @@
   padding-bottom: calc(4rem - 3rem * var(--header-t));
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .wordmark {
   /* 13.875rem → 8rem */
   width: calc(13.875rem - 5.875rem * var(--header-t));

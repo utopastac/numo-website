@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/Button'
 import styles from './index.module.css'
 
@@ -25,13 +26,15 @@ export function SiteHeader() {
   return (
     <header className={styles.root} data-compact={compact ? 'true' : undefined}>
       <div className={styles.inner}>
-        <img
-          className={styles.wordmark}
-          src="/images/logo-light.png"
-          alt="numo"
-          width={111}
-          height={24}
-        />
+        <Link className={styles.brand} to="/" aria-label="numo home">
+          <img
+            className={styles.wordmark}
+            src="/images/logo-light.png"
+            alt="numo"
+            width={111}
+            height={24}
+          />
+        </Link>
         <Button className={styles.cta} />
       </div>
     </header>
