@@ -20,6 +20,14 @@ export function SiteFooter() {
           </p>
         </div>
         <div className={styles.meta}>
+          <nav className={styles.links} aria-label="Legal">
+            <a href="/support/" className={styles.link}>
+              Support
+            </a>
+            <a href="/privacy/" className={styles.link}>
+              Privacy
+            </a>
+          </nav>
           <p className={styles.credit}>
             A product from{' '}
             <a href="https://f-90.co.uk" className={styles.link}>

@@ -23,6 +23,11 @@ npm run build
 
 Push `docs/` (or enable GitHub Pages from the `docs` folder on `main`). DNS: CNAME `numo` → `utopastac.github.io` (or this repo’s Pages hostname), and keep `public/CNAME` as `numo.f-90.co.uk`.
 
+App Store listing URLs:
+
+- Support: `https://numo.f-90.co.uk/support`
+- Privacy Policy: `https://numo.f-90.co.uk/privacy`
+
 ## Conventions
 
 - One folder per component: `index.tsx` + `index.module.css`
