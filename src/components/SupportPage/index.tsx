@@ -5,19 +5,19 @@ import styles from './index.module.css'
 export function SupportPage() {
   return (
     <LegalDoc
-      title="Support — Numo"
-      description="Support and contact for Numo on iPhone and Apple Watch."
+      title="Support — Dayring"
+      description="Support and contact for Dayring on iPhone and Apple Watch."
     >
       <h1>Support</h1>
       <p>
-        Need help with Numo on iPhone or Apple Watch? Start with the notes below, or email
+        Need help with Dayring on iPhone or Apple Watch? Start with the notes below, or email
         us directly.
       </p>
 
       <div className={styles.actions}>
         <a
           className={styles.button}
-          href="mailto:archgrovehouse@gmail.com?subject=Numo%20support"
+          href="mailto:archgrovehouse@gmail.com?subject=Dayring%20support"
         >
           Email support
         </a>
@@ -28,7 +28,7 @@ export function SupportPage() {
 
       <h2>Where is my data stored?</h2>
       <p>
-        Counters and history stay on your devices. Numo uses on-device storage shared with
+        Counters and history stay on your devices. Dayring uses on-device storage shared with
         widgets and the Apple Watch companion when installed. Uninstalling the app, or
         erasing the app’s data, removes local logs. Export anything you want to keep before
         deleting the app.
@@ -43,7 +43,7 @@ export function SupportPage() {
       <h2>Widgets and Apple Watch</h2>
       <p>
         Home Screen widgets and the watch companion read from the same on-device data as the
-        iPhone app. If a widget looks stale, open Numo once so it can refresh, and confirm
+        iPhone app. If a widget looks stale, open Dayring once so it can refresh, and confirm
         the watch is paired and nearby.
       </p>
 

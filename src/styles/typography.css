@@ -14,7 +14,7 @@
   --font-size-display: 7rem; /* 56 */
   --font-size-display-large: 10rem; /* 80 */
 
-  /* App-scoped (used by embedded Numo UI) */
+  /* App-scoped (used by embedded Dayring UI) */
   --app-font-size-caption: 1.75rem; /* 14 */
   --app-font-size-body: 2rem; /* 16 */
   --app-font-size-body-large: 2.25rem; /* 18 */

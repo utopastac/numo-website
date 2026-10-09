@@ -12,7 +12,7 @@ export function Hero() {
           height={104}
         />
         <h1 className={styles.lede}>
-          <span className={styles.brand}>Numo</span> is a simple, beautiful numbers tracker for
+          <span className={styles.brand}>Dayring</span> is a simple, beautiful numbers tracker for
           your daily goals. Calories, water, savings, workouts, or coffee. Tailored to your rhythm.
         </h1>
       </div>

@@ -1,4 +1,4 @@
-/** Theme Colors collection from Numo design system (Light + Dark modes). */
+/** Theme Colors collection from the Dayring design system (Light + Dark modes). */
 export type ThemeAppearance = 'adaptive' | 'alwaysDark' | 'alwaysLight'
 
 export type ThemeSwatch = {

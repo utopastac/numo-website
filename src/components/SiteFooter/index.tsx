@@ -6,13 +6,13 @@ export function SiteFooter() {
     <footer className={styles.root}>
       <div className={styles.frame}>
         <div className={styles.brand}>
-          <Link to="/" aria-label="numo home">
+          <Link to="/" aria-label="Dayring home">
             <img
               className={styles.wordmark}
-              src="/images/logo-light.png"
-              alt="numo"
-              width={74}
-              height={16}
+              src="/images/dayring-logo.svg"
+              alt="Dayring"
+              width={484}
+              height={102}
             />
           </Link>
           <p className={styles.tagline}>
@@ -37,7 +37,7 @@ export function SiteFooter() {
               f-90
             </a>
           </p>
-          <p className={styles.copy}>© 2026 Numo</p>
+          <p className={styles.copy}>© 2026 Dayring</p>
         </div>
       </div>
     </footer>

@@ -26,13 +26,13 @@ export function SiteHeader() {
   return (
     <header className={styles.root} data-compact={compact ? 'true' : undefined}>
       <div className={styles.inner}>
-        <Link className={styles.brand} to="/" aria-label="numo home">
+        <Link className={styles.brand} to="/" aria-label="Dayring home">
           <img
             className={styles.wordmark}
-            src="/images/logo-light.png"
-            alt="numo"
-            width={111}
-            height={24}
+            src="/images/dayring-logo.svg"
+            alt="Dayring"
+            width={484}
+            height={102}
           />
         </Link>
         <Button className={styles.cta} />

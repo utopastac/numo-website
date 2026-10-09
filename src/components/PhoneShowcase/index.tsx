@@ -22,12 +22,12 @@ export function PhoneShowcase() {
               playsInline
               preload="auto"
               disableRemotePlayback
-              aria-label="Numo app demo on iPhone"
+              aria-label="Dayring app demo on iPhone"
             />
             <img
               className={styles.poster}
               src={HERO_POSTER}
-              alt="Numo counter screen on iPhone"
+              alt="Dayring counter screen on iPhone"
               width={390}
               height={844}
             />

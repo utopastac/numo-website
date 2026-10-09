@@ -18,7 +18,7 @@ export function HomePage() {
   const [palette, setPalette] = useState<ThemePaletteName>('Muted')
 
   useEffect(() => {
-    document.title = 'numo'
+    document.title = 'Dayring'
   }, [])
 
   return (

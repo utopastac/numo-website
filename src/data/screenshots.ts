@@ -24,32 +24,32 @@ export const GALLERY_SLIDES = [
   {
     id: 'list-normal',
     image: '/images/list-normal.png',
-    alt: 'Numo dashboard with counter list',
+    alt: 'Dayring dashboard with counter list',
   },
   {
     id: 'compact',
     image: '/images/compact.png',
-    alt: 'Numo compact counter view',
+    alt: 'Dayring compact counter view',
   },
   {
     id: 'list-compact',
     image: '/images/list-compact.png',
-    alt: 'Numo compact list of counters',
+    alt: 'Dayring compact list of counters',
   },
   {
     id: 'history',
     image: '/images/history.png',
-    alt: 'Numo history and progress chart',
+    alt: 'Dayring history and progress chart',
   },
   {
     id: 'settings',
     image: '/images/settings.png',
-    alt: 'Numo settings screen',
+    alt: 'Dayring settings screen',
   },
   {
     id: 'protein',
     image: '/images/protein.png',
-    alt: 'Numo protein counter detail',
+    alt: 'Dayring protein counter detail',
   },
 ] as const
 

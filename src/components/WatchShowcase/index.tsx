@@ -24,12 +24,12 @@ export function WatchShowcase() {
                 playsInline
                 preload="auto"
                 disableRemotePlayback
-                aria-label="Numo companion app demo on Apple Watch"
+                aria-label="Dayring companion app demo on Apple Watch"
               />
               <img
                 className={styles.poster}
                 src={WATCH_POSTER}
-                alt="Numo counter screen on Apple Watch"
+                alt="Dayring counter screen on Apple Watch"
                 width={416}
                 height={496}
               />

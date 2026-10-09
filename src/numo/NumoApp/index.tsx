@@ -16,7 +16,7 @@ type Props = {
 }
 
 /**
- * Interactive Numo UI — designed to run inside the marketing site
+ * Interactive Dayring UI — designed to run inside the marketing site
  * (e.g. Hero phone frame) without replacing the page around it.
  */
 export function NumoApp({ initialCounterId = 'protein', className }: Props) {
